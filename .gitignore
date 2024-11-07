@@ -5,6 +5,7 @@
 /.pnp
 .pnp.*
 /.idea
+.idea
 .yarn/*
 !.yarn/patches
 !.yarn/plugins

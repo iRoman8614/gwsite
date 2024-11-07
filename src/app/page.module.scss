@@ -1,0 +1,137 @@
+.main {
+  padding-top: 66px;
+}
+
+.navbar {
+  padding: 8px;
+  background-color: #FFFFFF;
+  width: 100vw;
+  height: 66px;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+.buttonSet {
+  display: flex;
+  gap: 16px;
+  justify-self: center;
+}
+
+.activelink, .link {
+  text-decoration: none;
+  font-size: 35px;
+  padding: 6px 12px;
+}
+
+.activelink {
+  color: #FFFFFF;
+  background-color: #15193E;
+  border-radius: 11px;
+}
+
+.link {
+  color: #15193E;
+}
+
+.bg1 {
+  background: url("/bg.svg");
+}
+
+.linkBlock {
+  position: relative;
+}
+
+.linkDivider {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+}
+
+.linkSet {
+  padding-top: 90px;
+  display: flex;
+  gap: 35px;
+  justify-self: center;
+}
+
+.socialBorder {
+  width: 84px;
+  height: 84px;
+  padding: 12px;
+  background-color: white;
+  border-radius: 11px;
+}
+
+.socialLabel {
+  font-size: 35px;
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 130px;
+}
+
+.imgBlock1 {
+  width: 100vw;
+  position: relative;
+}
+
+.img1 {
+  width: 100vw;
+  height: auto;
+}
+
+.imgBlock1TopDivider {
+  width: 100vw;
+  position: absolute;
+  top: 2px;
+  rotate: -2deg;
+  //transform: translateY(-30%);
+}
+
+.imgBlock1BottomDivider {
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  rotate: 1.2deg;
+  //transform: translateY(40%);
+}
+
+
+.bg2 {
+  background: url("/bg2.svg");
+}
+
+.imgBlock2 {
+  width: 100vw;
+  position: relative;
+}
+
+.img2 {
+  width: 100vw;
+  height: auto;
+}
+
+.imgBlock2TopDivider {
+  width: 100vw;
+  position: absolute;
+  top: -10px;
+  rotate: 0.7deg;
+  //transform: translateY(-30%);
+}
+
+.imgBlock2BottomDivider {
+  width: 100vw;
+  position: absolute;
+  bottom: -15px;
+  rotate: 0deg;
+  //transform: translateY(40%);
+}
+
+
+
+
+.divider {
+  overflow: hidden;
+}
