@@ -1,6 +1,8 @@
+'use client'
 import Image from "next/image";
 import styles from "./page.module.scss";
 import Link from "next/link";
+import {useState} from "react";
 
 const divider = '/divider.png'
 const Picture1 = '/Picture1.png'
@@ -11,13 +13,42 @@ const Twitter = '/Twitter.svg'
 const Youtube = '/Youtube.svg'
 const Picture2 = '/Picture2.png'
 const footer = '/footer.png'
+const screen1 = '/screen1.png'
 
 
 export default function Home() {
+    const [isNavbarVisible, setIsNavbarVisible] = useState(false);
+
+    const toggleNavbar = () => {
+        setIsNavbarVisible(!isNavbarVisible);
+    };
+
   return (
       <main className={styles.main}>
           <div className={styles.navbar}>
-              <nav className={styles.buttonSet}>
+              <div className={styles.mobileLine}>
+                  <div className={styles.toggleButton} onClick={toggleNavbar}>
+                      ☰
+                  </div>
+                  <div className={styles.mobileLinkSet}>
+                      <div className={styles.socialBorder}>
+                          <Image className={styles.socialImage} src={Youtube} alt={'YT'} width={60} height={60} />
+                      </div>
+                      <div className={styles.socialBorder}>
+                          <Image className={styles.socialImage} src={Telegram} alt={'TG'} width={60} height={60} />
+                      </div>
+                      <div className={styles.socialBorder}>
+                          <Image className={styles.socialImage} src={Twitter} alt={'X'} width={60} height={60} />
+                      </div>
+                      {/*<div className={styles.socialBorder}>*/}
+                      {/*    <Image className={styles.socialImage} src={Discord} alt={'Discord'} width={60} height={60} />*/}
+                      {/*</div>*/}
+                      {/*<div className={styles.socialBorder}>*/}
+                      {/*    <Image className={styles.socialImage} src={Reddit} alt={'Reddit'} width={60} height={60} />*/}
+                      {/*</div>*/}
+                  </div>
+              </div>
+              <nav className={`${styles.buttonSet} ${isNavbarVisible ? styles.visible : ''}`}>
                   <Link className={styles.activelink} href="#">HOME</Link>
                   <Link className={styles.link} href='#'>telegram</Link>
                   <Link className={styles.link} href='#'>X (twitter)</Link>
@@ -25,8 +56,8 @@ export default function Home() {
                   <Link className={styles.link} href="#">WhitePaper(Coming Soon)</Link>
               </nav>
           </div>
-          <video width="100%" autoPlay loop muted controls>
-              <source src="/gw_teaser.mp4" type="video/mp4" />
+          <video className={styles.videoBlock} width="100%" autoPlay loop muted controls>
+              <source src="/gw_teaser.mp4?cache_bust=1" type="video/mp4" />
               Your browser does not support the video tag.
           </video>
           <div className={styles.bg1}>
@@ -36,20 +67,20 @@ export default function Home() {
                   </div>
                   <div className={styles.linkSet}>
                       <div className={styles.socialBorder}>
-                          <Image src={Youtube} alt={'YT'} width={60} height={60} />
+                          <Image className={styles.socialImage} src={Youtube} alt={'YT'} width={60} height={60} />
                       </div>
                       <div className={styles.socialBorder}>
-                          <Image src={Telegram} alt={'TG'} width={60} height={60} />
+                          <Image className={styles.socialImage} src={Telegram} alt={'TG'} width={60} height={60} />
                       </div>
                       <div className={styles.socialBorder}>
-                          <Image src={Twitter} alt={'X'} width={60} height={60} />
+                          <Image className={styles.socialImage} src={Twitter} alt={'X'} width={60} height={60} />
                       </div>
-                      <div className={styles.socialBorder}>
-                          <Image src={Discord} alt={'Discord'} width={60} height={60} />
-                      </div>
-                      <div className={styles.socialBorder}>
-                          <Image src={Reddit} alt={'Reddit'} width={60} height={60} />
-                      </div>
+                      {/*<div className={styles.socialBorder}>*/}
+                      {/*    <Image className={styles.socialImage} src={Discord} alt={'Discord'} width={60} height={60} />*/}
+                      {/*</div>*/}
+                      {/*<div className={styles.socialBorder}>*/}
+                      {/*    <Image className={styles.socialImage} src={Reddit} alt={'Reddit'} width={60} height={60} />*/}
+                      {/*</div>*/}
                   </div>
                   <div className={styles.socialLabel}>Click to copy contact address</div>
               </div>
@@ -63,15 +94,15 @@ export default function Home() {
                   </div>
               </div>
               <div className={styles.textBlock1}>
-                  {/*<div>*/}
-                  {/*    <Image className={styles.gameScreen1} src={gameScreen} alt={''} width={430} height={840} />*/}
-                  {/*</div>*/}
-                  {/*<div>*/}
-                  {/*    Welcome to GANG WARS — the ultimate PvP battle experience, now on Telegram! Step into a world where only the strongest survive, and the sharpest rise to the top.*/}
-                  {/*    <br/>*/}
-                  {/*    Farm in-game tokens, challenge rivals in thrilling*/}
-                  {/*    PvP duels, and climb through the ranks to prove yourself in higher and fiercer leagues. Join a powerful gang and mark your territory in this brutal underworld.*/}
-                  {/*</div>*/}
+                  <div>
+                      <Image className={styles.gameScreen1} src={screen1} alt={''} width={430} height={840} />
+                  </div>
+                  <div>
+                      Welcome to GANG WARS — the ultimate PvP battle experience, now on Telegram! Step into a world where only the strongest survive, and the sharpest rise to the top.
+                      <br/>
+                      Farm in-game tokens, challenge rivals in thrilling
+                      PvP duels, and climb through the ranks to prove yourself in higher and fiercer leagues. Join a powerful gang and mark your territory in this brutal underworld.
+                  </div>
               </div>
           </div>
           <div className={styles.bg2}>
@@ -93,7 +124,7 @@ export default function Home() {
               {/*    </div>*/}
               {/*    <div>img</div>*/}
               {/*</div>*/}
-              <div>
+              <div className={styles.footer}>
                   <Image src={footer} alt={''} width={1920} height={500} />
               </div>
           </div>

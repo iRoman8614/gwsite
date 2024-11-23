@@ -1,5 +1,8 @@
+@import "./_utils.scss";
+
 .main {
   padding-top: 66px;
+  padding-bottom: 0;
 }
 
 .navbar {
@@ -12,15 +15,39 @@
   z-index: 2;
 }
 
+.mobileLine {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.toggleButton {
+  background-color: #5864E1;
+  border-radius: 11px;
+  display: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #FFFFFF;
+  padding: 3px 10px;
+  width: fit-content;
+}
+
 .buttonSet {
   display: flex;
+  align-self: center;
   gap: 16px;
   justify-self: center;
 }
 
+.buttonSet.visible {
+  display: flex;
+}
+
 .activelink, .link {
   text-decoration: none;
-  font-size: 35px;
+  font-size: auto-clamp(20, 35);
   padding: 6px 12px;
 }
 
@@ -32,6 +59,44 @@
 
 .link {
   color: #15193E;
+}
+
+@media (max-width: 768px) {
+  .mobileLine {
+    display: flex;
+  }
+  .buttonSet {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 66px;
+    left: 0;
+    right: 0;
+    padding: 16px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .toggleButton {
+    display: block;
+  }
+
+  .linkBlock {
+    display: none;
+  }
+
+  .imgBlock1 {
+    padding-top: 100px;
+  }
+}
+
+
+.videoBlock {
+  margin-top: 66px;
+  width: 100vw;
 }
 
 .bg1 {
@@ -56,12 +121,23 @@
   justify-self: center;
 }
 
+.mobileLinkSet {
+  display: flex;
+  justify-self: center;
+  gap: 10px;
+}
+
 .socialBorder {
-  width: 84px;
-  height: 84px;
-  padding: 12px;
+  width: auto-clamp(45, 86);
+  height: auto-clamp(45, 86);
+  padding: auto-clamp(5, 12);
   background-color: white;
-  border-radius: 11px;
+  border-radius: auto-clamp(8, 11);
+}
+
+.socialImage {
+  width: auto-clamp(35, 60);
+  height: auto-clamp(35, 60);
 }
 
 .socialLabel {
@@ -70,6 +146,10 @@
   text-align: center;
   padding-top: 25px;
   padding-bottom: 130px;
+}
+
+.space {
+  display: none;
 }
 
 .imgBlock1 {
@@ -98,8 +178,12 @@
   //transform: translateY(40%);
 }
 
+.textBlock1 {
+  display: flex;
+}
 
 .bg2 {
+  padding-top: 20px;
   background: url("/bg2.svg");
 }
 
@@ -116,7 +200,7 @@
 .imgBlock2TopDivider {
   width: 100vw;
   position: absolute;
-  top: -10px;
+  top: -8px;
   rotate: 0.7deg;
   //transform: translateY(-30%);
 }
@@ -130,8 +214,11 @@
 }
 
 
-
+.footer {
+  width: 100vw;
+  overflow: hidden;
+}
 
 .divider {
-  overflow: hidden;
+  object-fit: cover;
 }
