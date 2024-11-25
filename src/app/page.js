@@ -83,6 +83,7 @@ export default function Home() {
               </div>
               <div className={styles.textBlock1}>
                   <Image className={styles.window1bg} src={window1} alt={''} width={1920} height={1200} />
+                  <Image className={styles.window1mobBg} src={window1mob} alt={''} width={768} height={800} />
                   <div className={styles.window1container}>
                       <Image className={styles.window1image} src={screen1} alt={''} width={430} height={840} />
                       <div className={styles.window1text}>
@@ -102,6 +103,7 @@ export default function Home() {
               </div>
               <div className={styles.textBlock2}>
                   <Image className={styles.window2bg} src={window2} alt={''} width={1920} height={1100} />
+                  <Image className={styles.window2mobBg} src={window2mob} alt={''} width={768} height={900} />
                   <div className={styles.window2container}>
                       <div className={styles.window2text}>
                           But that’s just the beginning. Soon, you’ll be able to customize your character, making every battle personal and every victory sweeter. And as you progress, gear up to take on challenges where the stakes are real — battling for crypto rewards in a high-stakes showdown of skill.

@@ -67,6 +67,7 @@
 }
 
 .bg1 {
+  margin-top: -5px;
   background: url("/bg.svg");
 }
 
@@ -120,7 +121,6 @@
 }
 
 .imgBlock1 {
-  border: 1px solid red;
   width: 100vw;
   height: fit-content;
 }
@@ -144,6 +144,10 @@
   height: auto;
 }
 
+.window1mobBg {
+  display: none;
+}
+
 .window1container {
   width: 70%;
   position: absolute;
@@ -156,20 +160,20 @@
 }
 
 .window1image {
-  width: auto-clamp(260, 430);
-  height: auto-clamp(450, 830);
+  width: auto-clamp(200, 430);
+  height: auto-clamp(400, 860);
 }
 
 .window1text {
   max-width: 970px;
-  font-size: auto-clamp(26, 40);
+  font-size: auto-clamp(24, 40);
   color: black;
   text-align: right;
   align-self: center;
 
   a {
     color: #4C3981;
-    font-size: auto-clamp(34, 48);
+    font-size: auto-clamp(30, 48);
   }
 }
 
@@ -180,6 +184,10 @@
 .window2bg {
   width: 100vw;
   height: auto;
+}
+
+.window2mobBg {
+  display: none;
 }
 
 .window2container {
@@ -202,8 +210,8 @@
 }
 
 .window2image {
-  width: auto-clamp(260, 430);
-  height: auto-clamp(450, 830);
+  width: auto-clamp(200, 430);
+  height: auto-clamp(400, 860);
 }
 
 
@@ -268,7 +276,10 @@
   }
 
   .img1mob {
+    padding-top: auto-clamp(20, 40);
+    display: block;
     width: 100vw;
+    height: auto;
   }
 
   .toggleButton {
@@ -279,12 +290,35 @@
     display: none;
   }
 
-  .textBlock1 {
+  .window1bg {
     display: none;
   }
 
-  .textBlock2 {
-    display: none;
+  .window1mobBg {
+    display: block;
+    width: 100vw;
+    height: fit-content;
+  }
+
+  .window1container {
+    width: 80%;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: auto-clamp(15, 60);
+  }
+
+  .window1image {
+    width: auto-clamp(130, 860);
+    height: auto-clamp(260, 1720);
+  }
+
+  .window1text {
+    font-size: auto-clamp(16, 80);
+    text-align: center;
+    a {
+      color: #4C3981;
+      font-size: auto-clamp(22, 98);
+    }
   }
 
   .img2 {
@@ -292,7 +326,43 @@
   }
 
   .img2mob {
+    display: block;
     width: 100vw;
     height: auto;
+  }
+
+  .window2bg {
+    display: none;
+  }
+
+  .window2mobBg {
+    display: block;
+    width: 100vw;
+    height: auto;
+  }
+
+  .window2container {
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    gap: auto-clamp(15, 60);
+  }
+
+  .window2image {
+    width: auto-clamp(130, 860);
+    height: auto-clamp(260, 1720);
+  }
+
+  .window2text {
+    font-size: auto-clamp(16, 80);
+    text-align: center;
+    a {
+      color: #4C3981;
+      font-size: auto-clamp(22, 98);
+    }
+  }
+
+  .footer {
+    height: 150px;
   }
 }
