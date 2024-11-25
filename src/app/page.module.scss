@@ -9,10 +9,10 @@
   padding: 8px;
   background-color: #FFFFFF;
   width: 100vw;
-  height: 66px;
+  height: auto-clamp(40, 66);;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 15;
 }
 
 .mobileLine {
@@ -61,41 +61,8 @@
   color: #15193E;
 }
 
-@media (max-width: 768px) {
-  .mobileLine {
-    display: flex;
-  }
-  .buttonSet {
-    width: 100%;
-    display: none;
-    flex-direction: column;
-    gap: 8px;
-    background-color: #FFFFFF;
-    position: absolute;
-    top: 66px;
-    left: 0;
-    right: 0;
-    padding: 16px;
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .toggleButton {
-    display: block;
-  }
-
-  .linkBlock {
-    display: none;
-  }
-
-  .imgBlock1 {
-    padding-top: 100px;
-  }
-}
-
-
 .videoBlock {
-  margin-top: 66px;
+  margin-top: auto-clamp(40, 66);
   width: 100vw;
 }
 
@@ -128,8 +95,8 @@
 }
 
 .socialBorder {
-  width: auto-clamp(45, 86);
-  height: auto-clamp(45, 86);
+  width: auto-clamp(45, 84);
+  height: auto-clamp(45, 84);
   padding: auto-clamp(5, 12);
   background-color: white;
   border-radius: auto-clamp(8, 11);
@@ -145,7 +112,7 @@
   color: #FFFFFF;
   text-align: center;
   padding-top: 25px;
-  padding-bottom: 130px;
+  padding-bottom: auto-clamp(60, 130);
 }
 
 .space {
@@ -153,8 +120,9 @@
 }
 
 .imgBlock1 {
+  border: 1px solid red;
   width: 100vw;
-  position: relative;
+  height: fit-content;
 }
 
 .img1 {
@@ -162,25 +130,82 @@
   height: auto;
 }
 
-.imgBlock1TopDivider {
-  width: 100vw;
-  position: absolute;
-  top: 2px;
-  rotate: -2deg;
-  //transform: translateY(-30%);
-}
-
-.imgBlock1BottomDivider {
-  width: 100vw;
-  position: absolute;
-  bottom: 0;
-  rotate: 1.2deg;
-  //transform: translateY(40%);
+.img1mob{
+  display: none;
 }
 
 .textBlock1 {
-  display: flex;
+  width: 100vw;
+  position: relative;
 }
+
+.window1bg {
+  width: 100vw;
+  height: auto;
+}
+
+.window1container {
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: flex;
+  gap: auto-clamp(60, 150);
+}
+
+.window1image {
+  width: auto-clamp(260, 430);
+  height: auto-clamp(450, 830);
+}
+
+.window1text {
+  max-width: 970px;
+  font-size: auto-clamp(26, 40);
+  color: black;
+  text-align: right;
+  align-self: center;
+
+  a {
+    color: #4C3981;
+    font-size: auto-clamp(34, 48);
+  }
+}
+
+.textBlock2 {
+  position: relative;
+}
+
+.window2bg {
+  width: 100vw;
+  height: auto;
+}
+
+.window2container {
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: flex;
+  gap: auto-clamp(60, 150);
+}
+
+.window2text {
+  max-width: 970px;
+  font-size: auto-clamp(24, 40);
+  color: black;
+  text-align: left;
+  align-self: center;
+}
+
+.window2image {
+  width: auto-clamp(260, 430);
+  height: auto-clamp(450, 830);
+}
+
 
 .bg2 {
   padding-top: 20px;
@@ -189,7 +214,7 @@
 
 .imgBlock2 {
   width: 100vw;
-  position: relative;
+  height: auto;
 }
 
 .img2 {
@@ -197,28 +222,77 @@
   height: auto;
 }
 
-.imgBlock2TopDivider {
-  width: 100vw;
-  position: absolute;
-  top: -8px;
-  rotate: 0.7deg;
-  //transform: translateY(-30%);
+.img2mob {
+  display: none;
 }
-
-.imgBlock2BottomDivider {
-  width: 100vw;
-  position: absolute;
-  bottom: -15px;
-  rotate: 0deg;
-  //transform: translateY(40%);
-}
-
 
 .footer {
   width: 100vw;
+  height: auto-clamp(250, 500);
   overflow: hidden;
+  margin-bottom: -5px;
 }
 
 .divider {
   object-fit: cover;
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 66px;
+  }
+  .videoBlock {
+    margin-top: 66px;
+  }
+  .mobileLine {
+    display: flex;
+  }
+  .buttonSet {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 66px;
+    left: 0;
+    right: 0;
+    padding: 16px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .img1 {
+    display: none;
+  }
+
+  .img1mob {
+    width: 100vw;
+  }
+
+  .toggleButton {
+    display: block;
+  }
+
+  .linkBlock {
+    display: none;
+  }
+
+  .textBlock1 {
+    display: none;
+  }
+
+  .textBlock2 {
+    display: none;
+  }
+
+  .img2 {
+    display: none;
+  }
+
+  .img2mob {
+    width: 100vw;
+    height: auto;
+  }
 }

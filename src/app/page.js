@@ -6,14 +6,19 @@ import {useState} from "react";
 
 const divider = '/divider.png'
 const Picture1 = '/Picture1.png'
-const Discord = '/Discord.svg'
-const Reddit = '/Reddit.svg'
+const Picture1mob = '/Picture1mob.png'
 const Telegram = 'Telegram.svg'
 const Twitter = '/Twitter.svg'
 const Youtube = '/Youtube.svg'
 const Picture2 = '/Picture2.png'
+const Picture2mob = '/Picture2mob.png'
 const footer = '/footer.png'
-const screen1 = '/screen1.png'
+const screen1 = '/gameScreen1.png'
+const screen2 = '/gameScreen2.png'
+const window1 = '/window1.png'
+const window1mob = '/window1mob.png'
+const window2 = '/window2.png'
+const window2mob = '/window2mob.png'
 
 
 export default function Home() {
@@ -40,12 +45,6 @@ export default function Home() {
                       <div className={styles.socialBorder}>
                           <Image className={styles.socialImage} src={Twitter} alt={'X'} width={60} height={60} />
                       </div>
-                      {/*<div className={styles.socialBorder}>*/}
-                      {/*    <Image className={styles.socialImage} src={Discord} alt={'Discord'} width={60} height={60} />*/}
-                      {/*</div>*/}
-                      {/*<div className={styles.socialBorder}>*/}
-                      {/*    <Image className={styles.socialImage} src={Reddit} alt={'Reddit'} width={60} height={60} />*/}
-                      {/*</div>*/}
                   </div>
               </div>
               <nav className={`${styles.buttonSet} ${isNavbarVisible ? styles.visible : ''}`}>
@@ -75,57 +74,47 @@ export default function Home() {
                       <div className={styles.socialBorder}>
                           <Image className={styles.socialImage} src={Twitter} alt={'X'} width={60} height={60} />
                       </div>
-                      {/*<div className={styles.socialBorder}>*/}
-                      {/*    <Image className={styles.socialImage} src={Discord} alt={'Discord'} width={60} height={60} />*/}
-                      {/*</div>*/}
-                      {/*<div className={styles.socialBorder}>*/}
-                      {/*    <Image className={styles.socialImage} src={Reddit} alt={'Reddit'} width={60} height={60} />*/}
-                      {/*</div>*/}
                   </div>
                   <div className={styles.socialLabel}>Click to copy contact address</div>
               </div>
               <div className={styles.imgBlock1}>
-                  <div className={styles.imgBlock1TopDivider}>
-                      <Divider />
-                  </div>
                   <Image className={styles.img1} src={Picture1} alt={''} width={1920} height={800} />
-                  <div className={styles.imgBlock1BottomDivider}>
-                      <Divider />
-                  </div>
+                  <Image className={styles.img1mob} src={Picture1mob} alt={''} width={768} height={400} />
               </div>
               <div className={styles.textBlock1}>
-                  <div>
-                      <Image className={styles.gameScreen1} src={screen1} alt={''} width={430} height={840} />
-                  </div>
-                  <div>
-                      Welcome to GANG WARS — the ultimate PvP battle experience, now on Telegram! Step into a world where only the strongest survive, and the sharpest rise to the top.
-                      <br/>
-                      Farm in-game tokens, challenge rivals in thrilling
-                      PvP duels, and climb through the ranks to prove yourself in higher and fiercer leagues. Join a powerful gang and mark your territory in this brutal underworld.
+                  <Image className={styles.window1bg} src={window1} alt={''} width={1920} height={1200} />
+                  <div className={styles.window1container}>
+                      <Image className={styles.window1image} src={screen1} alt={''} width={430} height={840} />
+                      <div className={styles.window1text}>
+                          Welcome to <a>GANG WARS</a> — the ultimate PvP battle experience, now on Telegram! Step into a world where only the strongest survive, and the sharpest rise to the top.
+                          <br/>
+                          <br/>
+                          Farm in-game tokens, challenge rivals in thrilling
+                          PvP duels, and climb through the ranks to prove yourself in higher and fiercer leagues. Join a powerful gang and mark your territory in this brutal underworld.
+                      </div>
                   </div>
               </div>
           </div>
           <div className={styles.bg2}>
               <div className={styles.imgBlock2}>
-                  <div className={styles.imgBlock2TopDivider}>
-                      <Divider />
-                  </div>
                   <Image className={styles.img2} src={Picture2} alt={''} width={1920} height={800} />
-                  <div className={styles.imgBlock2BottomDivider}>
-                      <Divider />
+                  <Image className={styles.img2mob} src={Picture2mob} alt={''} width={1920} height={800} />
+              </div>
+              <div className={styles.textBlock2}>
+                  <Image className={styles.window2bg} src={window2} alt={''} width={1920} height={1100} />
+                  <div className={styles.window2container}>
+                      <div className={styles.window2text}>
+                          But that’s just the beginning. Soon, you’ll be able to customize your character, making every battle personal and every victory sweeter. And as you progress, gear up to take on challenges where the stakes are real — battling for crypto rewards in a high-stakes showdown of skill.
+                          <br/>
+                          <br/>
+                          Are you ready to stake your claim in the streets?
+                          Join Gang Wars and start building your legacy today.
+                      </div>
+                      <Image className={styles.window2image} src={screen2} alt={''} width={430} height={830} />
                   </div>
               </div>
-              {/*<div>*/}
-              {/*    <div>*/}
-              {/*        But that’s just the beginning. Soon, you’ll be able to customize your character, making every battle personal and every victory sweeter. And as you progress, gear up to take on challenges where the stakes are real — battling for crypto rewards in a high-stakes showdown of skill.*/}
-              {/*        <br/>*/}
-              {/*        Are you ready to stake your claim in the streets?*/}
-              {/*        Join Gang Wars and start building your legacy today.*/}
-              {/*    </div>*/}
-              {/*    <div>img</div>*/}
-              {/*</div>*/}
               <div className={styles.footer}>
-                  <Image src={footer} alt={''} width={1920} height={500} />
+                  <Image className={styles.footer} src={footer} alt={''} width={1920} height={500} />
               </div>
           </div>
       </main>
