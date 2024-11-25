@@ -179,6 +179,7 @@
 
 .textBlock2 {
   position: relative;
+  overflow-y: hidden;
 }
 
 .window2bg {
@@ -217,6 +218,7 @@
 
 .bg2 {
   padding-top: 20px;
+  overflow-y: hidden;
   background: url("/bg2.svg");
 }
 
