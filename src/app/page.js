@@ -36,21 +36,21 @@ export default function Home() {
                       ☰
                   </div>
                   <div className={styles.mobileLinkSet}>
-                      <div className={styles.socialBorder}>
-                          <Image className={styles.socialImage} src={Youtube} alt={'YT'} width={60} height={60} />
-                      </div>
-                      <div className={styles.socialBorder}>
+                      {/*<div className={styles.socialBorder}>*/}
+                      {/*    <Image className={styles.socialImage} src={Youtube} alt={'YT'} width={60} height={60} />*/}
+                      {/*</div>*/}
+                      <Link href={'https://t.me/Gang_wars_bot'} className={styles.socialBorder}>
                           <Image className={styles.socialImage} src={Telegram} alt={'TG'} width={60} height={60} />
-                      </div>
-                      <div className={styles.socialBorder}>
+                      </Link>
+                      <Link href={"https://x.com/gangwars_game"} className={styles.socialBorder}>
                           <Image className={styles.socialImage} src={Twitter} alt={'X'} width={60} height={60} />
-                      </div>
+                      </Link>
                   </div>
               </div>
               <nav className={`${styles.buttonSet} ${isNavbarVisible ? styles.visible : ''}`}>
                   <Link className={styles.activelink} href="#">HOME</Link>
-                  <Link className={styles.link} href='#'>telegram</Link>
-                  <Link className={styles.link} href='#'>X (twitter)</Link>
+                  <Link className={styles.link} href={'https://t.me/Gang_wars_bot'}>telegram</Link>
+                  <Link className={styles.link} href={"https://x.com/gangwars_game"}>X (twitter)</Link>
                   <Link className={styles.link} href="#">roadmap(Coming Soon)</Link>
                   <Link className={styles.link} href="#">WhitePaper(Coming Soon)</Link>
               </nav>
@@ -65,17 +65,18 @@ export default function Home() {
                       <Divider />
                   </div>
                   <div className={styles.linkSet}>
-                      <div className={styles.socialBorder}>
-                          <Image className={styles.socialImage} src={Youtube} alt={'YT'} width={60} height={60} />
-                      </div>
-                      <div className={styles.socialBorder}>
+                      {/*<div className={styles.socialBorder}>*/}
+                      {/*    <Image className={styles.socialImage} src={Youtube} alt={'YT'} width={60} height={60} />*/}
+                      {/*</div>*/}
+                      <Link href={'https://t.me/Gang_wars_bot'} className={styles.socialBorder}>
                           <Image className={styles.socialImage} src={Telegram} alt={'TG'} width={60} height={60} />
-                      </div>
-                      <div className={styles.socialBorder}>
+                      </Link>
+                      <Link href={"https://x.com/gangwars_game"} className={styles.socialBorder}>
                           <Image className={styles.socialImage} src={Twitter} alt={'X'} width={60} height={60} />
-                      </div>
+                      </Link>
                   </div>
-                  <div className={styles.socialLabel}>Click to copy contact address</div>
+                  <div className={styles.socialLabel}>Click to open</div>
+                  {/*<div className={styles.socialLabel}>Click to copy contact address</div>*/}
               </div>
               <div className={styles.imgBlock1}>
                   <Image className={styles.img1} src={Picture1} alt={''} width={1920} height={800} />
